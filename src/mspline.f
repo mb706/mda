@@ -302,6 +302,10 @@ C
       if(u .lt. x) then
       b = x
       endif
+C  check for NaN
+      if(ISNAN(x))then
+      go to 90
+      endif
       v = w
       fv = fw
       w = x
